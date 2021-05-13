@@ -1,0 +1,39 @@
+header {
+    background-color: var(--light-blue);
+}
+
+header nav {
+    width: 60%;
+    margin: 0 auto;
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem 0;
+}
+
+header nav a:not(:nth-child(2)) {
+    text-decoration: none;
+    color: var(--primary-gray);
+    font-weight: bold;
+    line-height: 1.6;
+    font-size: 1.675rem;
+    min-height: 48px;
+}
+
+header nav a:not(:nth-child(2))::after {
+    content: "";
+    background-color: var(--primary-gray);
+    height: 5px;
+    width: 0px;
+    display: block;
+    transition: 400ms;
+}
+
+header nav a:last-child::after {
+    float: right;
+}
+
+header nav a:not(:nth-child(2n)):hover::after {
+    width: 100%;
+}
