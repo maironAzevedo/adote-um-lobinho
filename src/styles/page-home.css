@@ -1,14 +1,4 @@
-/***
- *    ----    ---- ------------    ------    ----------   ------------ -----------  
- *    ****    **** ************   ********   ************ ************ ***********  
- *    ----    ---- ----          ----------  --        -- ----         ----    ---  
- *    ************ ************ ****    **** **        ** ************ *********    
- *    ------------ ------------ ------------ --        -- ------------ ---------    
- *    ****    **** ****         ************ **        ** ****         ****  ****   
- *    ----    ---- ------------ ----    ---- ------------ ------------ ----   ----  
- *    ****    **** ************ ****    **** **********   ************ ****    **** 
- *                                                                                  
- */
+/*--------------------- HEADER --------------------------*/
 
 header {
     background-color: var(--light-blue);
@@ -39,31 +29,23 @@ header nav a:not(:nth-child(2)) {
 header nav a:not(:nth-child(2))::after {
     content: "";
     background-color: var(--primary-gray);
-    height: 5px;
-    width: 0px;
     display: block;
+    height: 5px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
     transition: 400ms;
 }
 
-header nav a:last-child::after {
-    float: right;
+header nav a:last-of-type::after {
+    transform-origin: right;
 }
 
 header nav a:not(:nth-child(2n)):hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
-/***
- *      ********      ------    --------  ----    ---- 
- *     ----------    ********   ********  *****   **** 
- *    ************  ----------    ----    ------  ---- 
- *    ---  --  --- ****    ****   ****    ************ 
- *    ***  **  *** ------------   ----    ------------ 
- *    ---  --  --- ************   ****    ****  ****** 
- *    ***  **  *** ----    ---- --------  ----   ----- 
- *    ---      --- ****    **** ********  ****    **** 
- *                                                     
- */
+/*--------------------- MAIN --------------------------*/
 
 section .text-content{
     width: 50%;
@@ -117,6 +99,7 @@ section:first-of-type::before {
     background-image: url("../assets/image.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position-x: 50%;
     background-position-y: 50%;
     filter: brightness(70%);
