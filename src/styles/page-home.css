@@ -45,9 +45,9 @@ header nav a:not(:nth-child(2n)):hover::after {
     transform: scaleX(1);
 }
 
-/*--------------------- MAIN --------------------------*/
+/*--------------------- FIRST SECTION --------------------------*/
 
-section .text-content{
+section .section-container {
     width: 50%;
     max-width: 1080px;
     margin: 0 auto;
@@ -102,7 +102,7 @@ section:first-of-type::before {
     background-size: cover;
     background-position-x: 50%;
     background-position-y: 50%;
-    filter: brightness(70%);
+    filter: brightness(50%);
     z-index: -1;
 }
 
@@ -112,6 +112,8 @@ section:first-of-type p {
     text-align: center;
 }
 
+/*--------------------- SECOND SECTION --------------------------*/
+
 section:nth-child(2) {
     background-color: var(--dark-blue);
 }
@@ -119,6 +121,8 @@ section:nth-child(2) {
 section:nth-child(2) p {
     padding-bottom: 4.2rem;
 }
+
+/*--------------------- THIRD SECTION --------------------------*/
 
 section:nth-child(3) {
     background-color: var(--primary-gray);
@@ -153,4 +157,58 @@ section:nth-child(3) .card p {
     text-align: center;
     font-size: 1.625rem;
     margin-bottom: 5.438rem;
+}
+
+/*--------------------- FOURTH SECTION --------------------------*/
+
+section:last-of-type .card {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.75rem 0 4.785rem;
+}
+
+section:last-of-type .card img {
+    background-size: cover;
+    box-shadow: -2.5rem -2.5rem var(--dark-blue), -2.5rem -2.5rem 0px 5px var(--primary-gray);
+}
+
+section:last-of-type .card .text-container {
+    color: var(--primary-gray);
+    max-width: 28rem;
+}
+
+section:last-of-type .card .text-container h3 {
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 2.25rem;
+}
+
+section:last-of-type .card .text-container h4 {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+section:last-of-type .card .text-container p {
+    margin-top: 1.25rem;
+    font-size: 1.5rem;
+}
+
+section:last-of-type .card:nth-child(3) {
+    flex-direction: row-reverse;
+}
+
+section:last-of-type .card:nth-child(3) h3,
+section:last-of-type .card:nth-child(3) h4 {
+    text-align: right;
+}
+
+section:last-of-type .card:nth-child(3) img {
+    box-shadow: 2.5rem -2.5rem var(--dark-blue), 2.5rem -2.5rem 0px 5px var(--primary-gray);
+}
+
+/*--------------------- FOOTER --------------------------*/
+
+footer {
+    color: var(--standard-white);
+    background-color: var(--primary-gray);
 }
